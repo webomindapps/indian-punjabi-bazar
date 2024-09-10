@@ -1,0 +1,256 @@
+<?php
+
+return [
+    'name' => 'Admin',
+    'menu' => [
+        [
+            'title' => '',
+            'menu'  => [
+                [
+                    'name' => 'Dashboard',
+                    'id' => 'dashboard',
+                    'icon' => 'bx bx-grid-alt',
+                    'route' => 'dashboard',
+                    'is_submenu' => false,
+                ],
+                [
+                    'name' => 'Categories',
+                    'id' => 'categories',
+                    'icon' => 'fal fa-clipboard-list',
+                    'route' => 'categories',
+                    'is_submenu' => false,
+                ],
+                [
+                    'name' => 'Products',
+                    'id' => 'products',
+                    'icon' => 'fal fa-box-full',
+                    'route' => 'products',
+                    'is_submenu' => true,
+                    'sub_menus' => [
+                        [
+                            'name' => 'All Products',
+                            'id' => 'products',
+                            'icon' => 'fal fa-sitemap',
+                            'route' => 'products',
+                        ],
+                        [
+                            'name' => 'New Products',
+                            'id' => 'product_settings',
+                            'icon' => 'fal fa-sitemap',
+                            'params' => 'type=new',
+                            'route' => 'products',
+                        ],
+                        [
+                            'name' => 'Best Seller',
+                            'id' => 'coupon_code',
+                            'icon' => 'fal fa-sitemap',
+                            'params' => 'type=best-seller',
+                            'route' => 'products',
+                        ],
+                        [
+                            'name' => 'Featured',
+                            'id' => 'coupon_code',
+                            'icon' => 'fal fa-sitemap',
+                            'params' => 'type=featured',
+                            'route' => 'products',
+                        ],
+                        [
+                            'name' => 'On Sale',
+                            'id' => 'coupon_code',
+                            'icon' => 'fal fa-sitemap',
+                            'params' => 'type=on-sale',
+                            'route' => 'products',
+                        ],
+                    ],
+                ],
+                [
+                    'name' => 'Orders',
+                    'id' => 'orders',
+                    'icon' => 'fal fa-box-alt',
+                    'route' => 'orders',
+                    'is_submenu' => false,
+                ],
+                [
+                    'name' => 'Invoices',
+                    'id' => 'invoices',
+                    'icon' => 'fal fa-file-invoice',
+                    'route' => 'order.invoices',
+                    'is_submenu' => false,
+                ],
+                [
+                    'name' => 'Shipments',
+                    'id' => 'shipment',
+                    'icon' => 'far fa-shipping-fast',
+                    'route' => 'order.shipments',
+                    'is_submenu' => false,
+                ],
+                [
+                    'name' => 'Refunds',
+                    'id' => 'refund',
+                    'icon' => 'fal fa-money-check-edit-alt',
+                    'route' => 'order.refunds',
+                    'is_submenu' => false,
+                ],
+                [
+                    'name' => 'Customers',
+                    'id' => 'customers',
+                    'icon' => 'fal fa-users',
+                    'route' => 'customers',
+                    'is_submenu' => false,
+                ],
+                [
+                    'name' => 'Book A Time',
+                    'id' => 'bookAtime',
+                    'icon' => 'fal fa-calendar-alt',
+                    'route' => 'products',
+                    'is_submenu' => true,
+                    'sub_menus' => [
+                        [
+                            'name' => 'Delivery City',
+                            'id' => 'deliveryCity',
+                            'icon' => 'fal fa-sitemap',
+                            'route' => 'delivery.cities',
+                        ],
+                    ],
+                ],
+                [
+                    'name' => 'Reviews',
+                    'id' => 'basic details',
+                    'icon' => 'far fa-star',
+                    'route' => 'reviews',
+                ],
+                [
+                    'name' => 'Settings',
+                    'id' => 'settings',
+                    'icon' => 'fal fa-sitemap',
+                    'is_submenu' => true,
+                    'sub_menus' => [
+                        // [
+                        //     'name' => 'Variants',
+                        //     'id' => 'product_settings',
+                        //     'icon' => 'fal fa-sitemap',
+                        //     'route' => 'variants',
+                        // ],
+                        [
+                            'name' => 'Brands',
+                            'id' => 'product_settings',
+                            'icon' => 'fal fa-sitemap',
+                            'route' => 'brands',
+                        ],
+                        [
+                            'name' => 'Flavours',
+                            'id' => 'flavour',
+                            'icon' => 'fal fa-sitemap',
+                            'route' => 'flavours',
+                        ],
+                        [
+                            'name' => 'Sources',
+                            'id' => 'flavour',
+                            'icon' => 'fal fa-sitemap',
+                            'route' => 'productsources',
+                        ],
+                        [
+                            'name' => 'Product Form',
+                            'id' => 'flavour',
+                            'icon' => 'fal fa-sitemap',
+                            'route' => 'productforms',
+                        ],
+                        [
+                            'name' => 'Coupon codes',
+                            'id' => 'coupon_code',
+                            'icon' => 'fal fa-sitemap',
+                            'route' => 'coupons',
+                        ],
+                        [
+                            'name' => 'Taxes',
+                            'id' => 'coupon_code',
+                            'icon' => 'fal fa-sitemap',
+                            'route' => 'taxes',
+                        ],
+                        [
+                            'name' => 'Home Setting',
+                            'id' => 'coupon_code',
+                            'icon' => 'fal fa-sitemap',
+                            'route' => 'home.setting',
+                        ],
+                        [
+                            'name' => 'Users',
+                            'id' => 'coupon_code',
+                            'icon' => 'fal fa-sitemap',
+                            'route' => 'admin.users',
+                        ],
+                        [
+                            'name' => 'Units',
+                            'id' => 'units',
+                            'icon' => 'fal fa-balance-scale-right',
+                            'route' => 'units',
+                        ],
+                    ],
+                ],
+                [
+                    'name' => 'CMS',
+                    'id' => 'cms',
+                    'icon' => 'fal fa-file-alt',
+                    'is_submenu' => true,
+                    'sub_menus' => [
+                        [
+                            'name' => 'Banners',
+                            'id' => 'basic details',
+                            'icon' => 'fas fa-fw fa-folder',
+                            'route' => 'banners',
+                        ],
+                        [
+                            'name' => 'Sliders',
+                            'id' => 'basic details',
+                            'icon' => 'fas fa-photo-film',
+                            'route' => 'sliders',
+                        ],
+                        [
+                            'name' => 'Pages',
+                            'id' => 'basic details',
+                            'icon' => 'fas fa-browser',
+                            'route' => 'pages',
+                        ],
+                    ]
+                ],
+                [
+                    'name' => 'Newsletters',
+                    'id' => 'basic details',
+                    'icon' => 'fas fa-newspaper',
+                    'route' => 'newsletters',
+                ],
+                [
+                    'name' => 'Product Bulk-upload',
+                    'id' => 'orders',
+                    'icon' => 'fal fa-boxes-alt',
+                    'route' => 'products.bulk.upload',
+                    'is_submenu' => false,
+                ],
+                [
+                    'name' => 'Career',
+                    'id' => 'basic details',
+                    'icon' => 'far fa-user-tie',
+                    'route' => 'applicants',
+                ],
+                [
+                    'name' => 'Enquiries',
+                    'id' => 'enquiries',
+                    'icon' => 'far fa-comments-alt',
+                    'route' => 'enquiries',
+                ],
+                [
+                    'name' => 'Product Requests',
+                    'id' => 'requests',
+                    'icon' => 'far fa-comment-alt-lines',
+                    'route' => 'product.requests',
+                ],
+                [
+                    'name' => 'Monthly Flyer',
+                    'id' => 'basic details',
+                    'icon' => 'far fa-book-open',
+                    'route' => 'monthlyflyer',
+                ],
+            ],
+        ]
+    ],
+];
